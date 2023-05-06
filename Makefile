@@ -2,13 +2,13 @@ install: #this should install dependencies
 	npm ci
 
 brain-games: #run the game
-	node bin/brain-games.js
+	node games/brain-games.js
 
 brain-even: #run brain even
-	node bin/brain-even.js
+	node games/brain-even.js
 
 brain-calc: #run brain calc
-	node bin/brain-calc.js
+	node games/brain-calc.js
 
 publish:
 	npm publish --dry-run
