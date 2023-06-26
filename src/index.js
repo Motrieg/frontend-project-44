@@ -1,12 +1,12 @@
 import readLineSync from 'readline-sync';
-import greeting from '../bin/cli.js';
+import greeting from './cli.js';
 
 const getUserName = greeting(); // intro message and asking an user name input
 const getRandomNumber = () => Math.floor(Math.random() * 100); // this will be in handy for RNG
 
 const askingAnAnswer = () => { // asking user for an answer input
-  const questionAName = readLineSync.question('Your answer: ');
-  return questionAName;
+  const userAnswer = readLineSync.question('Your answer: ');
+  return userAnswer;
 };
 const correctAnswerMessage = 'Correct!'; // used in case of correct user answer
 const incorrecAnswerMessage = (userAnswer, correctAnswer) => { // in case of incorrect user answer
