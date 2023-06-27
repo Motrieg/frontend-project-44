@@ -11,3 +11,7 @@ https://asciinema.org/a/TGlndbe1XEiNaiaVE9lh6C8Y2
 ### asciinema link for brain-calc game:
 
 https://asciinema.org/a/CxPDRjJZuxhOZ4sHhn7BxZMjl
+
+### asciinema link for brain-gcd game:
+
+https://asciinema.org/a/Nqq8TZd5gW2tYAPWWoFlZy5Gi
