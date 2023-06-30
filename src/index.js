@@ -21,10 +21,13 @@ export const answerPromt = () => {
   const userAnswer = readLineSync.question('Your answer: ');
   return userAnswer;
 };
+
 export const correctAnswerMessage = 'Correct!';
+
 export const incorrecAnswerMessage = (userAnswer, correctAnswer) => {
   console.log(`'${userAnswer}' is incorrect answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${getUserName}`);
 };
+
 export const gameCompletion = `Congratulations, ${getUserName}!`; // message shown after game completion
 
 export default getUserName;

@@ -8,7 +8,7 @@ const calculationGame = () => {
     const num2 = logic.getRandomNumber();
     const sum = num1 + num2;
     console.log(`Question: ${num1} + ${num2}`);
-    const answer = logic.answerPromt();
+    const answer = Number(logic.answerPromt());
 
     if (Number(answer) === sum) {
       console.log(logic.correctAnswerMessage);
