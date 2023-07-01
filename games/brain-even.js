@@ -6,7 +6,7 @@ const isEvenGame = () => {
 
   const isEven = () => {
     const num = randomNumber();
-    const question = `${num}`;
+    const question = num;
     const result = (num % 2 === 0) ? 'yes' : 'no';
 
     return [question, result];
