@@ -19,3 +19,7 @@ https://asciinema.org/a/Nqq8TZd5gW2tYAPWWoFlZy5Gi
 ### asciinema link for brain-progression game:
 
 https://asciinema.org/a/QnwTjy3CKaTZLezKSAo7khWj8
+
+### asciinema link for brain-prime game:
+
+https://asciinema.org/a/FzCnQFA4R0M2rQFOhXEMvC1Gv
