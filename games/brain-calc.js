@@ -2,7 +2,7 @@ import brainGame from '../src/index.js';
 import randomNumber from '../src/math-operations.js';
 
 const calculationGame = () => {
-  const gameQuestion = 'What is the result of an expression?';
+  const gameQuestion = 'What is the result of the expression?';
 
   const calculate = () => {
     const num1 = randomNumber(1, 10);
