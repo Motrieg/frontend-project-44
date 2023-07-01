@@ -8,7 +8,7 @@ export const basicGame = (gameQuestion, gameLogic) => {
 
   for (let i = 0; i < 3;) {
     const [question, correctAnswer] = gameLogic();
-    console.log('Question: ', question);
+    console.log(`Question: ${question}`);
     const userAnswer = readLineSync.question('Your answer: ');
 
     if (typeof (correctAnswer) === 'number' && Number(userAnswer) === correctAnswer) {
