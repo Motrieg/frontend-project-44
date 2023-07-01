@@ -6,7 +6,7 @@ export const basicGame = (gameQuestion, gameLogic) => {
 
   console.log(gameQuestion);
 
-  for (let i = 0; i < 3;) {
+  for (let i = 0; i < 3; i += 1) {
     const [question, correctAnswer] = gameLogic();
     console.log(`Question: ${question}`);
     const userAnswer = readLineSync.question('Your answer: ');
