@@ -1,8 +1,9 @@
 import readLineSync from 'readline-sync';
-import greeting from './cli.js';
 
 export const basicGame = (gameQuestion, gameLogic) => {
-  const getUserName = greeting();
+  console.log('Welcome to the Brain Games!');
+  const userName = readLineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
   console.log(gameQuestion);
 
@@ -16,11 +17,11 @@ export const basicGame = (gameQuestion, gameLogic) => {
     } else if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${getUserName}!`);
+      console.log(`'${userAnswer}' is wrong answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
       return;
     }
   }
-  console.log(`Congratulations, ${getUserName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default basicGame;
