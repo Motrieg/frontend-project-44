@@ -18,7 +18,7 @@ export const basicGame = (gameQuestion, gameLogic) => {
     } else if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is incorrect answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${getUserName}`);
+      console.log(`'${userAnswer}' is wrong answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${getUserName}`);
       return;
     }
   }
