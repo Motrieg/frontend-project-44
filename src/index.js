@@ -1,6 +1,8 @@
 import readLineSync from 'readline-sync';
 import greeting from './cli.js';
 
+// const roundsCount = 3;
+
 export const basicGame = (gameQuestion, gameLogic) => {
   const getUserName = greeting();
 
@@ -17,6 +19,7 @@ export const basicGame = (gameQuestion, gameLogic) => {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is incorrect answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${getUserName}`);
+      return;
     }
   }
   console.log(`Congratulations, ${getUserName}!`);
