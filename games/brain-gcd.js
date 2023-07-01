@@ -1,24 +1,19 @@
-import * as logic from '../src/index.js';
+import brainGame from '../src/index.js';
+import { getRandomNumber, getGcd } from '../src/math-operations.js';
 
 const gcdGame = () => {
-  console.log('Find the greatest common divisor of given numbers.');
+  const gameQuestion = 'Find the greatest common divisor of given numbers.';
 
-  for (let i = 0; i < 3;) {
-    const num1 = logic.getRandomNumber();
-    const num2 = logic.getRandomNumber();
-    const correctAnswer = logic.getGcd(num1, num2);
-    console.log(`Question: ${num1} ${num2}`);
-    const answer = logic.answerPromt();
+  const gcdCalculation = () => {
+    const num1 = getRandomNumber();
+    const num2 = getRandomNumber();
+    const question = `${num1} ${num2}`;
+    const result = getGcd(num1, num2);
 
-    if (Number(answer) === correctAnswer) {
-      console.log(logic.correctAnswerMessage);
-      i += 1;
-    } else {
-      logic.incorrecAnswerMessage(answer, correctAnswer);
-      i = 0;
-    }
-  }
-  console.log(logic.gameCompletion);
+    return [question, result];
+  };
+
+  brainGame(gameQuestion, gcdCalculation);
 };
 
 export default gcdGame;

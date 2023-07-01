@@ -1,38 +1,29 @@
-import * as logic from '../src/index.js';
+import brainGame from '../src/index.js';
+import randomNumber from '../src/math-operations.js';
 
 const progressionGame = () => {
-  console.log('What number is missing in the progression?');
+  const gameQuestion = 'What number is missing in the progression?';
 
-  for (let i = 0; i < 3;) {
-    const start = logic.getRandomNumber(1, 10);
-    const step = logic.getRandomNumber(1, 10);
+  const createProgression = () => {
+    const start = randomNumber(1, 10);
+    const step = randomNumber(1, 10);
     const progression = [];
     progression[0] = start;
 
-    for (let j = 0; j < 9; j += 1) {
-      const nextNumber = progression[j] + step;
+    for (let i = 0; i < 9; i += 1) {
+      const nextNumber = progression[i] + step;
       progression.push(nextNumber);
     }
-    const randomIndex = logic.getRandomNumber(1, progression.length - 1);
-    const correctAnswer = progression[randomIndex];
+    const randomIndex = randomNumber(1, progression.length - 1);
+    const hiddenNumber = progression[randomIndex];
     progression[randomIndex] = '..';
-    console.log(`Question: ${progression.join(' ')}`);
-    const answer = logic.answerPromt();
 
-    if (Number(answer) === correctAnswer) {
-      console.log(logic.correctAnswerMessage);
-      i += 1;
-    } else {
-      logic.incorrecAnswerMessage(answer, correctAnswer);
-      i = 0;
-    }
-  }
-  console.log(logic.gameCompletion);
+    const question = `${progression.join(' ')}`;
+
+    return [question, hiddenNumber];
+  };
+
+  brainGame(gameQuestion, createProgression);
 };
 
 export default progressionGame;
-/* 1.Определить стартовую точку массива прогрессии
-2. Определить шаг прогрессии
-3. Заполнить массив прогрессии числами
-4. Выбрать случайный индекс и заменить его на ..
-5. сравнить ответ пользователя с */

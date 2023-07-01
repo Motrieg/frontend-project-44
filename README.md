@@ -10,16 +10,20 @@ https://asciinema.org/a/TGlndbe1XEiNaiaVE9lh6C8Y2
 
 ### asciinema link for brain-calc game:
 
-https://asciinema.org/a/CxPDRjJZuxhOZ4sHhn7BxZMjl
+https://asciinema.org/a/DjM70AqYfDvrIZvSvsuIJWDat
+
+### asciinema link for brain-even game:
+
+https://asciinema.org/a/vasngIwZlx8TWp0zZQTiHXKFc
 
 ### asciinema link for brain-gcd game:
 
-https://asciinema.org/a/Nqq8TZd5gW2tYAPWWoFlZy5Gi
+https://asciinema.org/a/0paNgTWFGL14mjF5XYrkCAWDN
 
 ### asciinema link for brain-progression game:
 
-https://asciinema.org/a/QnwTjy3CKaTZLezKSAo7khWj8
+https://asciinema.org/a/NDR8AmELpDBf14o9h78YtZQbO
 
 ### asciinema link for brain-prime game:
 
-https://asciinema.org/a/FzCnQFA4R0M2rQFOhXEMvC1Gv
+https://asciinema.org/a/vfwQNMg4EIMTk3OHoF2YWqP4J

@@ -1,24 +1,36 @@
-import * as logic from '../src/index.js';
+import brainGame from '../src/index.js';
+import randomNumber from '../src/math-operations.js';
 
 const calculationGame = () => {
-  console.log('What is the result of an expression?');
+  const gameQuestion = 'What is the result of an expression?';
 
-  for (let i = 0; i < 3;) {
-    const num1 = logic.getRandomNumber();
-    const num2 = logic.getRandomNumber();
-    const sum = num1 + num2;
-    console.log(`Question: ${num1} + ${num2}`);
-    const answer = Number(logic.answerPromt());
+  const calculate = () => {
+    const num1 = randomNumber(1, 10);
+    const num2 = randomNumber(1, 10);
+    const operations = ['+', '-', '*'];
+    const defineOperation = operations[randomNumber(0, 3)];
 
-    if (Number(answer) === sum) {
-      console.log(logic.correctAnswerMessage);
-      i += 1;
-    } else {
-      logic.incorrecAnswerMessage(answer, sum);
-      i = 0;
+    const question = `${num1} ${defineOperation} ${num2}`;
+
+    let result = 0;
+    switch (defineOperation) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      case '*':
+        result = num1 * num2;
+        break;
+      default:
+        result = null;
     }
-  }
-  console.log(logic.gameCompletion);
+
+    return [question, result];
+  };
+
+  brainGame(gameQuestion, calculate);
 };
 
 export default calculationGame;
