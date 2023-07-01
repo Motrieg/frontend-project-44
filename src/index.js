@@ -1,5 +1,11 @@
 import readLineSync from 'readline-sync';
-import greeting from './cli.js';
+
+const greeting = () => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readLineSync.question('May i have your name? ');
+  console.log(`Hello, ${userName}!`);
+  return userName;
+};
 
 export const basicGame = (gameQuestion, gameLogic) => {
   const getUserName = greeting();
