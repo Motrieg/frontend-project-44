@@ -7,7 +7,6 @@ const gcdGame = () => {
     const num1 = logic.getRandomNumber();
     const num2 = logic.getRandomNumber();
     const correctAnswer = logic.getGcd(num1, num2);
-    console.log(correctAnswer);
     console.log(`Question: ${num1} ${num2}`);
     const answer = logic.answerPromt();
 

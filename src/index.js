@@ -17,6 +17,21 @@ export const getGcd = (n1, n2) => {
   return x;
 };
 
+export const isPrime = (num) => {
+  if (num === 1) {
+    return false;
+  }
+  if (num === 2) {
+    return true;
+  }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export const answerPromt = () => {
   const userAnswer = readLineSync.question('Your answer: ');
   return userAnswer;
@@ -28,6 +43,6 @@ export const incorrecAnswerMessage = (userAnswer, correctAnswer) => {
   console.log(`'${userAnswer}' is incorrect answer. Correct answer was '${correctAnswer}'.\nLet's try again, ${getUserName}`);
 };
 
-export const gameCompletion = `Congratulations, ${getUserName}!`; // message shown after game completion
+export const gameCompletion = `Congratulations, ${getUserName}!`;
 
 export default getUserName;
