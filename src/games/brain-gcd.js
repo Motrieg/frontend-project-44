@@ -1,5 +1,5 @@
-import brainGame from '../src/index.js';
-import { getRandomNumber, getGcd } from '../src/math-operations.js';
+import brainGame from '../index.js';
+import { getRandomNumber, getGcd } from '../math-operations.js';
 
 const gcdGame = () => {
   const gameQuestion = 'Find the greatest common divisor of given numbers.';

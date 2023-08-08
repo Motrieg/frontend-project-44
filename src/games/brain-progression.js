@@ -1,5 +1,5 @@
-import brainGame from '../src/index.js';
-import randomNumber from '../src/math-operations.js';
+import brainGame from '../index.js';
+import randomNumber from '../math-operations.js';
 
 const progressionGame = () => {
   const gameQuestion = 'What number is missing in the progression?';

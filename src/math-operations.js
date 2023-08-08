@@ -28,4 +28,22 @@ export const isPrime = (num) => {
   return true;
 };
 
+export const defineCalculation = (num1, num2, defineOperation) => {
+  let result = 0;
+  switch (defineOperation) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    default:
+      result = null;
+  }
+  return result;
+};
+
 export default getRandomNumber;
