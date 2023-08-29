@@ -2,6 +2,7 @@ export const getRandomNumber = (min = 1, max = 100) => {
   const result = Math.floor(Math.random() * (max - min) + min);
   return result;
 };
+
 export const getGcd = (n1, n2) => {
   let x = Math.abs(n1);
   let y = Math.abs(n2);
@@ -28,7 +29,7 @@ export const isPrime = (num) => {
   return true;
 };
 
-export const defineCalculation = (num1, num2, defineOperation) => {
+export const calculate = (num1, num2, defineOperation) => {
   let result = 0;
   switch (defineOperation) {
     case '+':
@@ -44,6 +45,20 @@ export const defineCalculation = (num1, num2, defineOperation) => {
       result = null;
   }
   return result;
+};
+
+export const isEven = (num) => num % 2 === 0;
+
+export const createProgression = (start, step, length) => {
+  const progression = [];
+  progression[0] = start;
+
+  for (let i = 1; i < length; i += 1) {
+    const nextNumber = progression[i - 1] + step;
+    progression.push(nextNumber);
+  }
+
+  return progression;
 };
 
 export default getRandomNumber;

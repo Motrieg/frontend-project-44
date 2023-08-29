@@ -1,18 +1,11 @@
-import brainGame from '../index.js';
-import randomNumber from '../math-operations.js';
+import { getRandomNumber, isEven } from '../math-operations.js';
 
 const isEvenGame = () => {
-  const gameQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const num = getRandomNumber();
+  const question = num;
+  const result = isEven(num) ? 'yes' : 'no';
 
-  const isEven = () => {
-    const num = randomNumber();
-    const question = num;
-    const result = (num % 2 === 0) ? 'yes' : 'no';
-
-    return [question, result];
-  };
-
-  brainGame(gameQuestion, isEven);
+  return [question, result];
 };
 
 export default isEvenGame;

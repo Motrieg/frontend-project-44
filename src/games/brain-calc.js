@@ -1,22 +1,15 @@
-import brainGame from '../index.js';
-import { getRandomNumber as randomNumber, defineCalculation } from '../math-operations.js';
+import { getRandomNumber, calculate } from '../math-operations.js';
 
 const calculationGame = () => {
-  const gameQuestion = 'What is the result of the expression?';
+  const num1 = getRandomNumber(1, 10);
+  const num2 = getRandomNumber(1, 10);
+  const operations = ['+', '-', '*'];
+  const defineOperation = operations[getRandomNumber(0, 3)];
 
-  const calculate = () => {
-    const num1 = randomNumber(1, 10);
-    const num2 = randomNumber(1, 10);
-    const operations = ['+', '-', '*'];
-    const defineOperation = operations[randomNumber(0, 3)];
+  const question = `${num1} ${defineOperation} ${num2}`;
+  const result = calculate(num1, num2, defineOperation);
 
-    const question = `${num1} ${defineOperation} ${num2}`;
-    const result = defineCalculation(num1, num2, defineOperation);
-
-    return [question, result];
-  };
-
-  brainGame(gameQuestion, calculate);
+  return [question, result];
 };
 
 export default calculationGame;

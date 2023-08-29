@@ -1,29 +1,19 @@
-import brainGame from '../index.js';
-import randomNumber from '../math-operations.js';
+import { getRandomNumber, createProgression } from '../math-operations.js';
 
 const progressionGame = () => {
-  const gameQuestion = 'What number is missing in the progression?';
+  const start = getRandomNumber(1, 10);
+  const step = getRandomNumber(1, 10);
+  const progressionLength = getRandomNumber(10, 20);
 
-  const createProgression = () => {
-    const start = randomNumber(1, 10);
-    const step = randomNumber(1, 10);
-    const progression = [];
-    progression[0] = start;
+  const progression = createProgression(start, step, progressionLength);
 
-    for (let i = 0; i < 9; i += 1) {
-      const nextNumber = progression[i] + step;
-      progression.push(nextNumber);
-    }
-    const randomIndex = randomNumber(1, progression.length - 1);
-    const hiddenNumber = progression[randomIndex];
-    progression[randomIndex] = '..';
+  const randomIndex = getRandomNumber(1, progression.length - 1);
+  const hiddenNumber = progression[randomIndex];
+  progression[randomIndex] = '..';
 
-    const question = `${progression.join(' ')}`;
+  const question = `${progression.join(' ')}`;
 
-    return [question, hiddenNumber];
-  };
-
-  brainGame(gameQuestion, createProgression);
+  return [question, hiddenNumber];
 };
 
 export default progressionGame;
