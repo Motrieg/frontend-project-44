@@ -29,9 +29,9 @@ export const isPrime = (num) => {
   return true;
 };
 
-export const calculate = (num1, num2, defineOperation) => {
+export const calculate = (num1, num2, arithmeticOperation) => {
   let result = 0;
-  switch (defineOperation) {
+  switch (arithmeticOperation) {
     case '+':
       result = num1 + num2;
       break;
@@ -42,7 +42,7 @@ export const calculate = (num1, num2, defineOperation) => {
       result = num1 * num2;
       break;
     default:
-      result = null;
+      result = 'Please pass an arithmetic sign to define an operation ';
   }
   return result;
 };
@@ -54,8 +54,8 @@ export const createProgression = (start, step, length) => {
   progression[0] = start;
 
   for (let i = 1; i < length; i += 1) {
-    const nextNumber = progression[i - 1] + step;
-    progression.push(nextNumber);
+    progression[i] = progression[i - 1] + step;
+    progression.push(progression[i]);
   }
 
   return progression;

@@ -14,9 +14,6 @@ export const basicGame = (gameDescription, gameLogic) => {
     console.log(`Question: ${question}`);
     const userAnswer = readLineSync.question('Your answer: ');
 
-    /* if (typeof (correctAnswer) === 'number' && Number(userAnswer) === correctAnswer) {
-      console.log('Correct!');
-    } else */
     if (userAnswer === String(correctAnswer)) {
       console.log('Correct!');
     } else {
