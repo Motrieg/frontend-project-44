@@ -54,8 +54,7 @@ export const createProgression = (start, step, length) => {
   progression[0] = start;
 
   for (let i = 1; i < length; i += 1) {
-    progression[i] = progression[i - 1] + step;
-    progression.push(progression[i]);
+    progression.push(progression[i - 1] + step);
   }
 
   return progression;
